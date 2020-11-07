@@ -45,7 +45,7 @@ selected_salaries_df = salaries[salaries['Field'].isin(selected_fields)][['Field
 
 # plot bar chart
 x = selected_salaries_df['Field'].tolist()
-fig1 = go.Figure(go.Bar(x = x, y = selected_salaries_df[selected_salaries_df.columns[1]], marker_color='#484848'))
+fig1 = go.Figure(go.Bar(x = x, y = selected_salaries_df[selected_salaries_df.columns[1]], marker_color='purple'))
 fig1.update_layout(template='ggplot2')
 st.plotly_chart(fig1, use_container_width=True)
 
@@ -131,7 +131,7 @@ selected_country_data = countries[:n]
 # plot bar chart
 fig4 = go.Figure(go.Bar(
     x = selected_country_data['country'],
-    y = selected_country_data['recipients'], marker_color='#484848'
+    y = selected_country_data['recipients'], marker_color='#FECB52'
 ))
 fig4.update_layout(template='ggplot2')
 st.plotly_chart(fig4, use_container_width=True)
